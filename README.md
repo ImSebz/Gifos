@@ -1,8 +1,12 @@
 # Gifos
-Giphy API practice made with HTML, SASS and JavaScript
+***
+EN: Giphy API practice made with HTML, SASS and JavaScript
 
-Practica de la API de Giphy, realizado en HTML, SASS y JavaScript
+ES: Practica de la API de Giphy, realizado en HTML, SASS y JavaScript
+***
+Acamica
+***
+# Code by
 
-Acamica.
+Juan Sebastian Camargo / https://github.com/ImSebz
 
-Realizado por Juan Sebastián Camargo Prieto.
