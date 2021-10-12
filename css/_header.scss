@@ -1,0 +1,166 @@
+.navbar {
+	position: sticky;
+	top: 0;
+	z-index: 5;
+	width: 100%;
+	box-sizing: border-box;
+	background-color: var(--color__bg);
+	font-size: $font-size-xs;
+	padding: 5px 10%;
+	border-top: 6px solid var(--color__primary__transparent);
+
+	@include media(sm) {
+		padding: 20px 30px;
+	}
+
+	svg {
+		width: 80px;
+		cursor: pointer;
+
+		@include media(sm) {
+			width: 60px;
+		}
+	}
+}
+
+#menu-input {
+	&:checked ~ #menu {
+		max-height: 100vh;
+		transition: max-height 0.25s ease-in;
+	}
+	
+	&:checked ~ label span:nth-child(1) {
+		opacity: 1;
+		transform: rotate(45deg) translate(1px, 1px);
+	}
+	&:checked ~ label span:nth-child(2) {
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	&:checked ~ label span:nth-child(3) {
+		transform: rotate(-45deg) translate(0px, 0px);
+	}
+}
+
+#menu {
+	font-size: $font-size-xs;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@include media(sm) {
+		font-size: $font-size-s;
+	}
+
+	@include media(sm) {
+		font-size: $font-size-xs;
+		position: absolute;
+		top: 100px;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		background-color: var(--color__primary__transparent);
+		box-sizing: border-box;
+		width: 100%;
+		height: 100vh;
+		max-height: 0;
+		transition: max-height 0.6s ease-out;
+		letter-spacing: 0;
+		line-height: 28px;
+		overflow: hidden;
+	}
+
+	li {
+		padding: 14px 25px;
+
+		button {
+			border: none;
+			background-color: rgba(255, 255, 255, 0);
+			font-size: $font-size-xs;
+		}
+
+		@include media(md) {
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		hr {
+			display: none;
+			width: 41px;
+			margin-top: 10px;
+
+			@include media(sm) {
+				display: block;
+			}
+		}
+
+		.circle-button {
+			@include media(sm) {
+				display: none;
+			}
+		}
+	}
+}
+
+.navbar-links {
+	font-family: $font-secundary;
+	font-weight: bold;
+	color: var(--color__primary);
+
+	@include media(sm) {
+		color: $white;
+	}
+
+	&:after {
+		bottom: 0;
+		content: '';
+		display: block;
+		height: 2px;
+		left: 50%;
+		position: relative;
+		background: $color__secondary;
+		transition: width 0.3s ease 0s, left 0.3s ease 0s;
+		width: 0;
+	}
+
+	&:hover:after {
+		width: 100%;
+		left: 0;
+	}
+
+	&.active {
+		color: $grey;
+	}
+}
+
+#icon-bars span {
+	display: none;
+
+	@include media(sm) {
+		display: block;
+		width: 28px;
+		height: 3px;
+		margin-bottom: 7px;
+		background: var(--color__primary);
+		transform-origin: 3px 0px;
+		transition: transform 0.5s ease, opacity 0.55s ease;
+	}
+
+	&:first-child {
+		transform-origin: 0% 0%;
+	}
+
+	&:nth-child(3) {
+		transform-origin: 0% 100%;
+	}
+}
+
+.shadow {
+	box-shadow: -1px 5px 18px 0px rgba(0, 0, 0, 0.66);
+	height: 6px;
+	position: sticky;
+	top: 100px;
+}

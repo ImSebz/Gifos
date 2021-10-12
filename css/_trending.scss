@@ -1,0 +1,70 @@
+#trending-GIFOS {
+	background-color: var(--color__bg__grey);
+}
+
+.list-gifs {
+	display: grid;
+	grid-template-columns: 1fr 80% 1fr;
+	grid-template-rows: 1fr;
+	padding-bottom: 10%;
+
+	@include media(sm) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
+		padding-bottom: 20%;
+	}
+
+	.content-arrow-left {
+		margin: 20px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		@include media(sm) {
+			display: none;
+		}
+	}
+
+	.content-arrow-right {
+		margin: 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		@include media(sm) {
+			display: none;
+		}
+	}
+
+	#gifs-trending {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		padding: 0;
+		overflow: hidden;
+		scroll-behavior: smooth;
+
+		@include media(sm) {
+			display: block;
+			white-space: nowrap;
+			overflow-x: scroll;
+			padding: 0% 5%;
+		}
+
+		.gif-container {
+			min-width: 32%;
+			margin: 0 20px 0 0;
+
+			@include media(sm) {
+				display: inline-block;
+				margin: 10px;
+				width: 320px;
+			}
+
+			@include media(xs) {
+				width: 200px;
+			}
+		}
+	}
+}

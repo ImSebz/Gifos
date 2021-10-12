@@ -1,0 +1,68 @@
+//Light Colors
+$color__bg: #ffffff;
+$color__bg__grey: #f3f5f8;
+$color__primary: #572ee5;
+$color__secondary: #50e3c2;
+$color__text: #060a24;
+$color__primary__transparent: rgba(86, 46, 229, 0.8);
+$color__hover__gifs: rgba(86, 46, 229, 0.6);
+
+//Dark mode Colors
+$color__bg--dark: #37383c;
+$color__bg__grey--dark: #222326;
+$color__primary--dark: #ffffff;
+$color__primary__transparent--dark: #000000;
+$color__text--dark: #ffffff;
+//Colors
+$grey: #9cafc3;
+$white: #ffffff;
+
+//Icons
+$img_camera: url(../media/camara.svg);
+$img_tape1: url(../media/element_cinta1.svg);
+$img_tape2: url(../media/element_cinta2.svg);
+$img_tape: url(../media/pelicula.svg);
+$img_light: url(../media/element-luz-camara.svg);
+
+//Dark mode Icons
+$img_camera--dark: url(../media/camara-modo-noc.svg);
+$img_tape1--dark: url(../media/element_cinta1-modo-noc.svg);
+$img_tape2--dark: url(../media/element_cinta2-modo-noc.svg);
+$img_tape--dark: url(../media/pelicula-modo-noc.svg);
+
+.theme {
+	--color__bg: #{$color__bg};
+	--color__bg__grey: #{$color__bg__grey};
+	--color__primary: #{$color__primary};
+	--color__text: #{$color__text};
+	--color__primary__transparent: #{$color__primary__transparent};
+	--img_camera: #{$img_camera};
+	--img_tape1: #{$img_tape1};
+	--img_tape2: #{$img_tape2};
+	--img_tape: #{$img_tape};
+}
+// Dark Theme
+.theme--dark {
+	--color__bg: #{$color__bg--dark};
+	--color__bg__grey: #{$color__bg__grey--dark};
+	--color__primary: #{$color__primary--dark};
+	--color__text: #{$color__text--dark};
+	--color__primary__transparent: #{$color__primary__transparent--dark};
+
+	// icons
+	--img_camera: #{$img_camera--dark};
+	--img_tape1: #{$img_tape1--dark};
+	--img_tape2: #{$img_tape2--dark};
+	--img_tape: #{$img_tape--dark};
+}
+
+// Fonts
+$font-primary: 'Roboto', sans-serif;
+$font-secundary: 'Montserrat', sans-serif;
+$font-size-xs: 1rem;
+$font-size-s: 1.3rem;
+$font-size-ns: 1.5rem;
+$font-size-n: 1.8rem;
+$font-size-m: 2.5rem;
+$font-size-l: 3rem;
+$font-size-xl: 3.8rem;

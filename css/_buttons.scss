@@ -1,0 +1,84 @@
+.btn-circle {
+	display: inline-block;
+	background-color: var(--color__bg);
+	border: 1px solid var(--color__primary);
+	border-radius: 50%;
+	width: 54px;
+	height: 54px;
+	cursor: pointer;
+
+	span {
+		display: block;
+		width: 17px;
+		height: 2px;
+		background-color: var(--color__primary);
+		position: relative;
+		left: 18px;
+	}
+
+	.line-1 {
+		top: 25px;
+	}
+
+	.line-2 {
+		top: 23px;
+		transform: rotate(90deg);
+	}
+
+	&:hover {
+		background-color: var(--color__primary);
+
+		span {
+			background-color: var(--color__bg);
+		}
+	}
+
+	&.active {
+		background-color: $grey;
+		border: 1px solid $grey;
+
+		span {
+			background-color: $white;
+		}
+	}
+
+	@include media(sm) {
+		display: none;
+	}
+}
+
+.btn-rounded {
+	cursor: pointer;
+	padding: 18px 25px;
+	background-color: var(--color__bg);
+	color: var(--color__primary);
+	border: 1px solid var(--color__primary);
+	border-radius: 30px;
+	font-family: $font-secundary;
+	font-weight: bold;
+	font-size: $font-size-xs;
+
+	&:hover {
+		background-color: var(--color__primary);
+		color: var(--color__bg);
+	}
+}
+
+.btn-arrow-left {
+	@include arrow;
+}
+
+.btn-arrow-right {
+	@include arrow;
+}
+
+.btn-transparent {
+	background-color: transparent;
+	color: transparent;
+	border: 1px solid transparent;
+
+	&:hover {
+		background-color: transparent;
+		color: transparent;
+	}
+}

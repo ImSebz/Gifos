@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>GIFOS</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+		integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+		rel="stylesheet" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="../css/fonts.css" />
+	<link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="theme">
+	<header class="navbar d-flex justify-between align-center">
+		<a href="index.html">
+			<img src="/media/logo-desktop.svg" id="img-logo-gifos" alt="Logo desktop">
+		</a>
+
+		<nav>
+			<input class="d-none" type="checkbox" id="menu-input" />
+			<label id="icon-bars" for="menu-input">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul id="menu">
+				<li>
+					<button id="noc-mode" class="navbar-links">Modo Nocturno</button>
+					<hr />
+				</li>
+				<li>
+					<a id="favs-link" class="navbar-links" href="favoritos.html">Favoritos</a>
+					<hr />
+				</li>
+				<li>
+					<a id="my-gifs-link" class="navbar-links active" href="mis-gifos.html">Mis GIFOS</a>
+					<hr />
+				</li>
+				<li>
+					<a class="btn-circle" href="crear-gifo.html">
+						<span class="line-1"></span>
+						<span class="line-2"></span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div id="modal" class="modal modal-closed"></div>
+		<section id="gifs-section">
+			<header class="section-header header-search">
+				<img src="/media/icon-mis-gifos.svg" alt="img-section..." />
+				<h2 class="title title-ns">Mis GIFOS</h2>
+			</header>
+			<div id="gifs-data">
+				<div id="gifs-results" class="gifs-results">
+				</div>
+				<div class="section-search-footer">
+					<button id="btn-rounded" class="btn-rounded">VER MÁS</button>
+				</div>
+			</div>
+			<div id="gifs-no-data" class="d-flex flex-column justify-center align-center">
+				<img class="section-img" src="/media/icon-mis-gifos-sin-contenido.svg" alt="svg-sin-resultados..." />
+				<p class="title title-small">¡Anímate a crear tu primer GIFO!</p>
+			</div>
+		</section>
+		<section id="trending-GIFOS">
+			<header class="section-header">
+				<h2 class="title title-ns">Trending GIFOS</h2>
+				<p class="title title-small title-outlined color-black">
+					Mira los últimos <br class="d-none-md" />
+					GIFOS de nuestra comunidad.
+				</p>
+			</header>
+			<div class="list-gifs">
+				<div class="content-arrow-left">
+					<div id="btn-arrow-left" class="btn-arrow-left">
+						<i class="fas fa-chevron-left"></i>
+					</div>
+				</div>
+				<div id="gifs-trending"></div>
+				<div class="content-arrow-right">
+					<div id="btn-arrow-right" class="btn-arrow-right">
+						<i class="fas fa-chevron-right"></i>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="content-social">
+			<p class="title title-small title-outlined color-black pa">Compartir en:</p>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></i></a>
+			</div>
+		</div>
+		<p class="pa">© GIFOS 2020 All Rights Reserved.</p>
+	</footer>
+
+	<script type="module" src="/js/nocturne-mode.js"></script>
+	<script type="module" src="/js/trending.js"></script>
+	<script type="module" src="/js/my-gifs.js"></script>
+</body>
+
+</html>

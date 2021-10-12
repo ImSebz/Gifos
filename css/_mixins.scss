@@ -1,0 +1,32 @@
+@mixin title {
+	font-family: $font-secundary;
+	font-weight: bold;
+	font-size: $font-size-m;
+	color: var(--color__primary);
+	text-align: center;
+
+	@include media(md) {
+		font-size: $font-size-n;
+	}
+}
+
+@mixin arrow {
+	cursor: pointer;
+	color: var(--color__primary);
+	background-color: var(--color__bg__grey);
+	border: 1px solid var(--color__primary);
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+
+	&:hover {
+		background-color: var(--color__primary);
+
+		i {
+			color: var(--color__bg);
+		}
+	}
+}
