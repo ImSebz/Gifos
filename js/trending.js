@@ -64,7 +64,7 @@ const leftMove = () => {
 		offset += 2;
 	}
 };
-//////
+
 btnLeft.addEventListener('click', leftMove);
 btnRight.addEventListener('click', rightMove);
 
