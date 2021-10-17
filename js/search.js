@@ -4,7 +4,6 @@ import gif from './gif.js';
 const containerSearch = document.getElementById('search-input');
 const searchInput = document.getElementById('search');
 const searchList = document.getElementById('list-search');
-const searchTrendings = document.getElementById('search-trending span');
 const btnSeeMore = document.getElementById('btn-rounded');
 const searchIconLeft = document.getElementById('icon-search-left');
 const searchIconRight = document.getElementById('icon-search-right');
@@ -12,6 +11,7 @@ const sectionInfoSearch = document.getElementById('info-search');
 const sectionDataSearch = document.getElementById('gifs-section');
 const containerGifsSearch = document.getElementById('gifs-results');
 const titleSearch = document.getElementById('title-search');
+const searchTrendings = document.querySelectorAll('#search-trending span');
 let totalGifs = 0;
 let dataGifs = [];
 
@@ -23,7 +23,7 @@ const handleDataAutocomplete = () => {
 	api.getApiAutocomplete(search)
 		.then((res) => {
 			const { data } = res;
-			searchList.innerHTML = ''; 
+			searchList.innerHTML = '';
 			let lista = '';
 
 			if (data.length) {
@@ -42,6 +42,7 @@ const handleDataAutocomplete = () => {
 		});
 };
 
+
 const handleDataSearch = (seeMore = false) => {
 	if (!seeMore) {
 		totalGifs = 0;
@@ -57,16 +58,15 @@ const handleDataSearch = (seeMore = false) => {
 			if (!seeMore) containerGifsSearch.innerHTML = '';
 
 			if (data.length) {
-				
 				totalGifs += data.length;
 				const gifsFav = api.getAllFavoritesLocal();
 				let templateGifs = '';
-
 				data.forEach((item) => {
 					dataGifs.push(item);
 					const iconFav = gifsFav.some((fav) => fav.id === item.id) ? 'heart' : 'heart-outline';
 					templateGifs += gif.maskGifs(item, iconFav);
 				});
+
 				containerGifsSearch.insertAdjacentHTML('beforeend', templateGifs);
 				gif.addEventMobile(
 					dataGifs,
@@ -86,7 +86,6 @@ const handleDataSearch = (seeMore = false) => {
 			console.warn('Error al hacer la petición getApiSearch en la API: ', err);
 		});
 };
-
 
 const addEventAutocomplete = () => {
 	const itemsListAutocomplete = document.querySelectorAll('.item-list-autocomplete');
@@ -152,6 +151,7 @@ const getTrendingSearch = () => {
 
 const addEventSearchTrendings = () => {
 	searchTrendings.forEach((element) => {
+		debugger
 		element.addEventListener('click', autocompleteTrending);
 	});
 };
