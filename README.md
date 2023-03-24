@@ -1,6 +1,6 @@
 # Gifos
 ***
-EN: Giphy's API proyect made with HTML, SASS and JavaScript
+EN: Proyect made with HTML, SASS and JavaScript using Giphy's API
 
 ES: Proyecto con uso de la API de Giphy, realizado en HTML, SASS y JavaScript
 
